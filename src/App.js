@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { View, Text } from 'react-native';
 import { Header } from './components/common';
 import firebase from 'firebase';
+import LoginForm from './components/LoginForm'
 
 class App extends Component {
 
@@ -20,10 +21,7 @@ class App extends Component {
         firebase.initializeApp(config);
     }
 
-    test(){
-        console.log('hello world');
-        
-    }
+  
 
     render(){
         return (
@@ -31,7 +29,7 @@ class App extends Component {
 
                 <Header headerText = "Authentication" />
 
-                <Text onPress={this.test}> An app </Text>
+                <LoginForm />
             </View>
         );
     }

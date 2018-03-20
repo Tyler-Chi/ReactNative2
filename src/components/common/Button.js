@@ -1,25 +1,16 @@
 import React from 'react';
-import { Text , TouchableOpacity } from 'react-native';
+import { Text, TouchableOpacity } from 'react-native';
 
-const Button = (props) => {
-
-    const { buttonStyle , textStyle } = styles;
-
-    console.log('button information is', props.info);
-    
+const Button = ({ onPress, children }) => {
+    const { buttonStyle, textStyle } = styles;
 
     return (
-        <TouchableOpacity 
-            style={buttonStyle}
-            onPress={props.onPress}
-            >
-            <Text 
-                style={textStyle}
-            > 
-                {props.info.title}
+        <TouchableOpacity onPress={onPress} style={buttonStyle}>
+            <Text style={textStyle}>
+                {children}
             </Text>
         </TouchableOpacity>
-    )
+    );
 };
 
 const styles = {
@@ -37,10 +28,10 @@ const styles = {
         backgroundColor: '#fff',
         borderRadius: 5,
         borderWidth: 1,
-        borderCOlor: '#007aff',
+        borderColor: '#007aff',
         marginLeft: 5,
         marginRight: 5
     }
-}
+};
 
 export { Button };

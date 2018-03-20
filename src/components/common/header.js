@@ -1,26 +1,17 @@
-
-
-//Import libraries for making a component
+// Import libraries for making a component
 import React from 'react';
-import { Text , View } from 'react-native';
-import axios from 'axios';
-
-//define the styling
-
+import { Text, View } from 'react-native';
 
 // Make a component
-const Header = (props1) => {
-
-    const { textStyle , viewStyle } = styles;
+const Header = (props) => {
+    const { textStyle, viewStyle } = styles;
 
     return (
         <View style={viewStyle}>
-            <Text style={textStyle}> {props1.headerText} </Text>
+            <Text style={textStyle}>{props.headerText}</Text>
         </View>
     );
-}
-
-//the styles is basically one big object
+};
 
 const styles = {
     viewStyle: {
@@ -28,20 +19,17 @@ const styles = {
         justifyContent: 'center',
         alignItems: 'center',
         height: 60,
-        paddingTop: 5,
-        marginTop: 20,
-        paddingBottom: 5,
+        paddingTop: 15,
         shadowColor: '#000',
         shadowOffset: { width: 0, height: 2 },
-        shadowOpacity: 0.2
+        shadowOpacity: 0.2,
+        elevation: 2,
+        position: 'relative'
     },
     textStyle: {
         fontSize: 20
     }
-}
-
-
+};
 
 // Make the component available to other parts of the app
-
 export { Header };
