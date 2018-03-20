@@ -29,7 +29,7 @@ const styles = {
         alignItems: 'center',
         height: 60,
         paddingTop: 5,
-        marginTop: 16,
+        marginTop: 20,
         paddingBottom: 5,
         shadowColor: '#000',
         shadowOffset: { width: 0, height: 2 },
@@ -44,4 +44,4 @@ const styles = {
 
 // Make the component available to other parts of the app
 
-export default Header;
+export { Header };
